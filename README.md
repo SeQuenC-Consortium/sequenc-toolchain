@@ -11,7 +11,7 @@ and assume any risks associated with Your exercise of permissions under this Lic
 
 ## Haftungsausschluss
 
-Dies ist ein Forschungsprototyp. Die Haftung für entgangenen Gewinn,Produktionsausfall, Betriebsunterbrechung, entgangene Nutzungen, Verlust von Daten und Informationen, Finanzierungsaufwendungen sowie sonstige Vermögens- und
+Dies ist ein Forschungsprototyp. Die Haftung für entgangenen Gewinn, Produktionsausfall, Betriebsunterbrechung, entgangene Nutzungen, Verlust von Daten und Informationen, Finanzierungsaufwendungen sowie sonstige Vermögens- und
 Folgeschäden ist, außer in Fällen von grober Fahrlässigkeit, Vorsatz und Personenschäden, ausgeschlossen.
 
 ## Acknowledgements
