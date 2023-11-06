@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: server
+  name: server
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: server
+  template:
+    metadata:
+      labels:
+        io.kompose.network/qunicorn-core-qunicorn: "true"
+        io.kompose.service: server
+    spec:
+      containers:
+        - env:
+            - name: BROKER_URL
+              value: redis://broker:6379
+            - name: CONTAINER_MODE
+              value: server
+            - name: DB_URL
+              value: postgresql://postgres:passwd@postgres/qunicorn
+            - name: SERVER_PORT
+              value: "8080"
+            - name: NUMBA_CACHE_DIR
+              value: /app/cache
+          image: iaasgeorgdl/qunicorn:release.11.23
+          name: server
+          ports:
+            - containerPort: 8080
+              hostPort: 8080
+              protocol: TCP
+      restartPolicy: Always
