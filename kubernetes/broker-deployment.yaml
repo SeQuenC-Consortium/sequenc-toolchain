@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: broker
+  name: broker
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: broker
+  template:
+    metadata:
+      labels:
+        io.kompose.network/qunicorn-core-qunicorn: "true"
+        io.kompose.service: broker
+    spec:
+      containers:
+        - image: redis:7.0.12
+          name: broker
+          ports:
+            - containerPort: 6379
+              hostPort: 6379
+              protocol: TCP
+      restartPolicy: Always
