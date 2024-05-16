@@ -42,3 +42,11 @@ The Kubernetes file can be created with the docker compose file and the tool **k
 
 The created kubernetes uses a local qunicorn image.
 Therefore, using **minikube** (https://minikube.sigs.k8s.io/docs/) the environment need to be set in order to find the image.
+
+
+## Release Notes
+
+ - v2: 16.05.2024
+   - Major updates to both dockerfile and docker-compose
+   - Server now runs in production mode instead of development mode
+   - Docker-compose now uses the ghcr image and has keycloak in it. Also the quil containers are commented as experimental. Database driver is now enforced to psycopg 
